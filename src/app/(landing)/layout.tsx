@@ -11,7 +11,7 @@ export default async function HomeLayout({ children }: HomeLayoutProps) {
     <>
       <Header />
       <MainNavigation />
-      <main className="flex-1 min-h-screen">{children}</main>
+      <main className="flex-1 container min-h-screen p-8">{children}</main>
       <Footer />
     </>
   );
