@@ -1,0 +1,9 @@
+import SearchBar from '../ui/searchbar';
+
+export default function MainNavigation() {
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  );
+}

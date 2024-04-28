@@ -1,16 +1,18 @@
 import FooterNavigation from '@/src/components/navigation/footer-navigation';
-import MainNavigation from '@/src/components/navigation/main-naviagtion';
+import Header from '@/src/components/navigation/header';
+import MainNavigation from '@/src/components/navigation/main.navigation';
 
 interface HomeLayoutProps {
   children: React.ReactNode;
 }
 
-export default function HomeLayout({ children }: HomeLayoutProps) {
+export default async function HomeLayout({ children }: HomeLayoutProps) {
   return (
-    <div className="container max-w-5xl">
+    <>
+      <Header />
       <MainNavigation />
       <main className="flex-1 min-h-screen">{children}</main>
       <FooterNavigation />
-    </div>
+    </>
   );
 }

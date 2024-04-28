@@ -1,6 +1,6 @@
 import { Icons } from '../ui/icons';
 
-export default async function MainNavigation() {
+export default function Header() {
   return (
     <header className="flex flex-row justify-between z-50 p-8">
       <div className="flex items-center gap-2">
