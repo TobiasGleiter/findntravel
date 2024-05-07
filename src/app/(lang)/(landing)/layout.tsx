@@ -1,4 +1,3 @@
-import Footer from '@/src/components/navigation/footer/footer';
 import { Metadata } from 'next';
 
 interface HomeLayoutProps {
@@ -19,12 +18,5 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 }
 
 export default async function HomeLayout({ children }: HomeLayoutProps) {
-  return (
-    <>
-      {/* <Header />
-      <MainNavigation /> */}
-      <main className="">{children}</main>
-      <Footer />
-    </>
-  );
+  return <main>{children}</main>;
 }

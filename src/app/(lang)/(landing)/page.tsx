@@ -1,4 +1,7 @@
 import test from '@/public/test.png';
+import LanguageButton from '@/src/components/buttons/language.button';
+import Copyright from '@/src/components/legal/copyright';
+import LegalLinks from '@/src/components/legal/legal.links';
 import { Icons } from '@/src/components/ui/icons';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,18 +9,17 @@ import Link from 'next/link';
 export default async function Home() {
   const images = [
     { id: 1, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 2, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 2, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 2, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 2, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 2, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 2, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
+    { id: 3, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
+    { id: 4, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
+    { id: 5, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
+    { id: 6, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
+    { id: 7, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
   ];
 
   return (
     <main className="mx-auto max-w-[1960px]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-">
-        <div className="flex items-center justify-center row-span-1 bg-secondary rounded-md text-center p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        <div className="flex min-h-[400px] row-span-1  items-center justify-center bg-secondary rounded-md text-center p-4 ">
           <div className="flex flex-col gap-4 items-center">
             <Icons.tree className="w-8 h-8" />
             <h1 className="flex items-center text-3xl font-bold">
@@ -57,6 +59,16 @@ export default async function Home() {
             />
           </Link>
         ))}
+        <div className="flex min-h-fit items-center justify-center bg-secondary rounded-md text-center ">
+          <div className="flex flex-col gap-4 items-center">
+            <Icons.tree className="w-8 h-8" />
+            <div className="flex flex-col gap-2">
+              <LanguageButton />
+              <Copyright />
+              <LegalLinks />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
