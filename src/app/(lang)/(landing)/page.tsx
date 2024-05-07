@@ -1,20 +1,20 @@
-import test from '@/public/test.png';
 import LanguageButton from '@/src/components/buttons/language.button';
 import Copyright from '@/src/components/legal/copyright';
 import LegalLinks from '@/src/components/legal/legal.links';
 import { Icons } from '@/src/components/ui/icons';
+import cloudinary from '@/src/utils/cloudinary';
 import Image from 'next/image';
 import Link from 'next/link';
 
+interface CloudinaryResource {
+  public_id: string;
+  secure_url: string;
+}
+
 export default async function Home() {
-  const images = [
-    { id: 1, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 3, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 4, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 5, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 6, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-    { id: 7, public_id: test, format: 'png', blurDataUrl: 'https://test.com/' },
-  ];
+  const { resources } = await cloudinary.v2.search.expression('cld').execute();
+
+  const images = resources;
 
   return (
     <main className="mx-auto max-w-[1960px]">
@@ -35,21 +35,19 @@ export default async function Home() {
             </p>
           </div>
         </div>
-        {images.map(({ id, public_id, blurDataUrl }) => (
+        {images.map(({ public_id, secure_url }: CloudinaryResource) => (
           <Link
-            key={id}
-            href={`/?photoId=${id}`}
-            as={`/p/${id}`}
+            key={public_id}
+            href={`/?photoId=${public_id}`}
+            as={`/p/${public_id}`}
             shallow
             className="after:content group relative block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
           >
             <Image
-              src={public_id}
+              src={secure_url}
               alt="Next.js Conf photo"
               className="transform  brightness-90 transition will-change-auto group-hover:brightness-110"
               style={{ transform: 'translate3d(0, 0, 0)' }}
-              placeholder="blur"
-              blurDataURL={blurDataUrl}
               width={720}
               height={480}
               sizes="(max-width: 640px) 100vw,
