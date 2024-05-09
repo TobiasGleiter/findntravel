@@ -12,7 +12,9 @@ interface CloudinaryResource {
 }
 
 export default async function Home() {
-  const { resources } = await cloudinary.v2.search.expression('cld').execute();
+  const { resources } = await cloudinary.v2.search
+    .expression('folder=findntravel')
+    .execute();
 
   const images = resources;
 
@@ -50,7 +52,7 @@ export default async function Home() {
               style={{ transform: 'translate3d(0, 0, 0)' }}
               width={720}
               height={480}
-              sizes="(max-width: 640px) 100vw,
+              sizes="(max-width: 720px) 100vw,
               (max-width: 1280px) 50vw,
               (max-width: 1536px) 33vw,
               25vw"
