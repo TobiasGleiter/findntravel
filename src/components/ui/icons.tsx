@@ -1,4 +1,12 @@
-import { Check, Eye, EyeOff, Globe, Search, Youtube } from 'lucide-react';
+import {
+  Check,
+  Eye,
+  EyeOff,
+  Globe,
+  Search,
+  TreePine,
+  Youtube,
+} from 'lucide-react';
 
 export const Icons = {
   check: Check,
@@ -7,4 +15,5 @@ export const Icons = {
   logoAnimation: Eye,
   search: Search,
   language: Globe,
+  tree: TreePine,
 };

@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { fontHeading, fontSans } from '../fonts/main.fonts';
 import { cn } from '../lib/utils';
 import './globals.css';
 import Providers from './providers';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Next App Template',
@@ -23,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className)}>
+      <body
+        className={cn('font-sans', fontSans.variable, fontHeading.variable)}
+      >
         <Providers>
           <main className="flex-1">{children}</main>
         </Providers>

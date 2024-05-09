@@ -1,6 +1,3 @@
-import Footer from '@/src/components/navigation/footer/footer';
-import Header from '@/src/components/navigation/header';
-import MainNavigation from '@/src/components/navigation/main.navigation';
 import { Metadata } from 'next';
 
 interface HomeLayoutProps {
@@ -21,12 +18,5 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 }
 
 export default async function HomeLayout({ children }: HomeLayoutProps) {
-  return (
-    <>
-      <Header />
-      <MainNavigation />
-      <main className="flex-1 container min-h-screen p-8">{children}</main>
-      <Footer />
-    </>
-  );
+  return <main>{children}</main>;
 }
