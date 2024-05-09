@@ -3,6 +3,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+      CLOUDINARY_FOLDER: ${{ secrets.CLOUDINARY_FOLDER }}
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
