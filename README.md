@@ -1,7 +1,3 @@
-# Nextjs Template 🏛️
+# Blackforest from above!
 
-- Nextjs 14 w/ App Router, Tailwindcss, Shadcn/ui
-- ESLint, Commitlint and Husky
-- Cypress and GitHub Actions
-
-Feel free to use this template!
+![Findntravel landing page](https://github.com/TobiasGleiter/second-hand-clothes-web-shop/blob/main/docs/images/landing.png?raw=true)
