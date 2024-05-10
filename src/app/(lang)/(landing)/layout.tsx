@@ -14,16 +14,16 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 }
 
 export default function Layout({
-  p,
+  image,
   children,
 }: {
-  p: React.ReactNode;
+  image: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <main>
       <div>{children}</div>
-      <div>{p}</div>
+      <div>{image}</div>
     </main>
   );
 }

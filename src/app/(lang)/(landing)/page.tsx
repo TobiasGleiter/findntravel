@@ -40,7 +40,7 @@ export default async function Home() {
             <p className="px-12 text-sm text-muted-foreground">
               Explore the Blackforest from above and try to find these places.
             </p>
-            <Link href={'/info/ahokwwx2aymg7hvoij8y'}>Info</Link>
+            <Link href={'/p/ahokwwx2aymg7hvoij8y'}>Info</Link>
           </div>
         </div>
         {images.map(
