@@ -8,21 +8,16 @@ export function Modal({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="absolute z-50 top-0 left-0 flex w-full pt-20 justify-center bg-black/80 h-screen min-h-screen">
-      <div className="relative rounded-none lg:rounded-lg h-fit max-w-5xl">
+      <div className="relative bg-white h-fit max-w-5xl">
         <button
           onClick={() => {
             router.back();
           }}
-          className={cn('w-fit flex gap-2', 'absolute right-0 m-4')}
-        ></button>
-        <div>
-          <div>head</div>
-          <div className="flex w-full justify-between">
-            <div>sdes</div>
-          </div>
-        </div>
-
-        <div>
+          className={cn('w-fit flex gap-2', '')}
+        >
+          Close Modal!
+        </button>
+        <div className="flex flex-col h-64">
           <div>{children}</div>
         </div>
       </div>
