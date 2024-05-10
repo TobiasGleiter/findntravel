@@ -15,7 +15,8 @@ interface CloudinaryResource {
 
 export default async function Home() {
   const { resources } = await cloudinary.v2.search
-    .expression('folder=findntravel')
+    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+    .max_results(100)
     .execute();
 
   const images = resources;
@@ -39,6 +40,7 @@ export default async function Home() {
             <p className="px-12 text-sm text-muted-foreground">
               Explore the Blackforest from above and try to find these places.
             </p>
+            <Link href={'/info'}>Info</Link>
           </div>
         </div>
         {images.map(

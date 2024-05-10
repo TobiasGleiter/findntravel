@@ -17,6 +17,17 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   };
 }
 
-export default async function HomeLayout({ children }: HomeLayoutProps) {
-  return <main>{children}</main>;
+export default async function HomeLayout({
+  children,
+  image,
+}: {
+  children: React.ReactNode;
+  image: React.ReactNode;
+}) {
+  return (
+    <main>
+      <div>{children}</div>
+      <div>{image}</div>
+    </main>
+  );
 }
