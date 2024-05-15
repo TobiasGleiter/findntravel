@@ -5,7 +5,7 @@ export default function Page({ params }) {
   const { id } = params;
   return (
     <Modal>
-      <ImageInfo id={id} />;
+      <ImageInfo id={id} />
     </Modal>
   );
 }
