@@ -1,9 +1,5 @@
 import { Metadata } from 'next';
 
-interface HomeLayoutProps {
-  children: React.ReactNode;
-}
-
 export async function generateMetadata({ params }): Promise<Metadata> {
   return {
     title: {
@@ -17,6 +13,17 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   };
 }
 
-export default async function HomeLayout({ children }: HomeLayoutProps) {
-  return <main>{children}</main>;
+export default function Layout({
+  image,
+  children,
+}: {
+  image: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <main>
+      <div>{children}</div>
+      <div>{image}</div>
+    </main>
+  );
 }

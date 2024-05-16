@@ -5,6 +5,7 @@ import {
   Globe,
   Search,
   TreePine,
+  X,
   Youtube,
 } from 'lucide-react';
 
@@ -16,4 +17,5 @@ export const Icons = {
   search: Search,
   language: Globe,
   tree: TreePine,
+  close: X,
 };

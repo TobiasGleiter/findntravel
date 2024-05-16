@@ -15,7 +15,8 @@ interface CloudinaryResource {
 
 export default async function Home() {
   const { resources } = await cloudinary.v2.search
-    .expression('folder=findntravel')
+    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+    .max_results(100)
     .execute();
 
   const images = resources;
@@ -66,7 +67,7 @@ export default async function Home() {
             </Link>
           )
         )}
-        <div className="flex min-h-fit items-center justify-center bg-secondary rounded-md text-center ">
+        <div className="flex min-h-[480px] items-center justify-center bg-secondary rounded-md text-center ">
           <div className="flex flex-col gap-4 items-center">
             <Icons.tree className="w-8 h-8" />
             <div className="flex flex-col gap-2">
