@@ -5,7 +5,7 @@ export default function LegalLinks() {
     <ul className="flex gap-4 text-sm antialiased items-center justify-center">
       <li>
         <Link href={'/'} className="hover:underline">
-          Datenschutz
+          Privacy Policy
         </Link>
       </li>
       <li>
