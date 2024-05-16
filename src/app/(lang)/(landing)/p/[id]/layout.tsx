@@ -2,7 +2,7 @@ import Footer from '@/src/components/navigation/footer/footer';
 import Logo from '@/src/components/ui/logo';
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params }): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Nature',
     description: 'Explore the blackforst from above and find the locations',

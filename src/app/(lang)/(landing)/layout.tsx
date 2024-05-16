@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params }): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
       default: 'Findntravel',
