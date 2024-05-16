@@ -1,7 +1,11 @@
 import Link from 'next/link';
+import React from 'react';
 import { Icons } from './icons';
 
-export default function Logo({ children }) {
+interface LogoProps {
+  children?: React.ReactNode;
+}
+export default function Logo({ children }: LogoProps) {
   return (
     <Link className="flex flex-col gap-4 items-center" href={'/'}>
       <div className="relative">
