@@ -40,7 +40,6 @@ export default async function Home() {
             <p className="px-12 text-sm text-muted-foreground">
               Explore the Blackforest from above and try to find these places.
             </p>
-            <Link href={'/p/ahokwwx2aymg7hvoij8y'}>Info</Link>
           </div>
         </div>
         {images.map(
@@ -68,7 +67,7 @@ export default async function Home() {
             </Link>
           )
         )}
-        <div className="flex min-h-fit items-center justify-center bg-secondary rounded-md text-center ">
+        <div className="flex min-h-[480px] items-center justify-center bg-secondary rounded-md text-center ">
           <div className="flex flex-col gap-4 items-center">
             <Icons.tree className="w-8 h-8" />
             <div className="flex flex-col gap-2">
