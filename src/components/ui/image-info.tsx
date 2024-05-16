@@ -10,7 +10,7 @@ export default async function ImageInfo({ id }) {
 
   return (
     <>
-      <OptimizedImage src={public_id} width={520} height={520} />
+      <OptimizedImage src={public_id} width={720} height={1080} />
     </>
   );
 }
